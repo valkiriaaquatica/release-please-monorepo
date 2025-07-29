@@ -5,8 +5,8 @@ on:
     branches: [main]
 
 permissions:
-  contents: write          # crear ramas, commits y tags
-  pull-requests: write     # abrir PRs de release
+  contents: write  
+  pull-requests: write   
 
 jobs:
   release-please:
@@ -21,7 +21,8 @@ jobs:
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
       - name: Print release outputs for debugging
-        continue-on-error: true
         run: |
-          echo "Release outputs:"
-          echo "${{ toJson(steps.release.outputs) }}"
+          echo "backend--release_created: ${{ steps.release.outputs.backend--release_created }}"
+          echo "backend--tag_name:        ${{ steps.release.outputs.backend--tag_name }}"
+          echo "frontend--release_created: ${{ steps.release.outputs.frontend--release_created }}"
+          echo "frontend--tag_name:        ${{ steps.release.outputs.frontend--tag_name }}"
