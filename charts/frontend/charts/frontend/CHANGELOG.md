@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/valkiriaaquatica/release-please-monorepo/compare/frontend-v1.1.0...frontend-v1.1.1) (2025-07-29)
+
+
+### Bug Fixes
+
+* **bug:** test ([d8bbea9](https://github.com/valkiriaaquatica/release-please-monorepo/commit/d8bbea957ea79fadd45758ded61d80bbeb62bc73))
+
 ## [1.1.0](https://github.com/valkiriaaquatica/release-please-monorepo/compare/frontend-v1.0.0...frontend-v1.1.0) (2025-07-29)
 
 
