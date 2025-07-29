@@ -1,0 +1,27 @@
+name: Release Helm Charts
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write          # crear ramas, commits y tags
+  pull-requests: write     # abrir PRs de release
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: release
+        uses: googleapis/release-please-action@v4
+        with:
+          token: ${{ secrets.GHUB_GITHUB_TOKEN }}
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
+
+      - name: Print release outputs
+        run: |
+          echo "Release outputs:"
+          echo "${{ toJson(steps.release.outputs) }}"
