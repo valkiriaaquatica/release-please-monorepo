@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/valkiriaaquatica/release-please-monorepo/compare/backend-v1.0.1...backend-v1.1.0) (2025-07-29)
+
+
+### Features
+
+* **backend:** test 1 ([6ddc753](https://github.com/valkiriaaquatica/release-please-monorepo/commit/6ddc753e8b64a68d0183674c59a27b8b3ff8dd49))
+* **backend:** test 1 ([882aa8b](https://github.com/valkiriaaquatica/release-please-monorepo/commit/882aa8b97d4dc2160cafb4366aeeb8522fb11fee))
+
 ## [1.0.1](https://github.com/valkiriaaquatica/release-please-monorepo/compare/backend-v1.0.0...backend-v1.0.1) (2025-07-29)
 
 
