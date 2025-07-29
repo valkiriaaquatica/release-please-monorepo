@@ -1,8 +1,9 @@
 {
   "packages": {
     "charts/backend": {
+      "path": "charts/backend",
       "package-name": "backend",
-      "changelog-path": "CHANGELOG.md",
+      "changelog-path": "charts/backend/CHANGELOG.md",
       "release-type": "helm",
       "bump-minor-pre-major": false,
       "bump-patch-for-minor-pre-major": false,
@@ -10,8 +11,9 @@
       "prerelease": false
     },
     "charts/frontend": {
+      "path": "charts/frontend",
       "package-name": "frontend",
-      "changelog-path": "CHANGELOG.md",
+      "changelog-path": "charts/frontend/CHANGELOG.md",
       "release-type": "helm",
       "bump-minor-pre-major": false,
       "bump-patch-for-minor-pre-major": false,
