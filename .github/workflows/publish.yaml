@@ -1,0 +1,33 @@
+name: Publish Release
+
+on:
+  push:
+    tags:
+      - "*-v*" 
+
+permissions:
+  contents: read
+  id-token: write
+  attestations: write 
+
+jobs:
+  detect-and-debug:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Parse tag
+        id: vars
+        run: |
+          TAG="${GITHUB_REF_NAME}"  
+          CHART="${TAG%%-*}"  
+          VERSION="${TAG#*-v}"  
+          echo "chart=$CHART"   >> $GITHUB_OUTPUT
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+      - name: Debug info
+        run: |
+          echo "Se ha publicado el chart '${{ steps.vars.outputs.chart }}' \
+                con la versión '${{ steps.vars.outputs.version }}'"
