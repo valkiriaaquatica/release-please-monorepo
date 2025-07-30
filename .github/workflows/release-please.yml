@@ -20,8 +20,3 @@ jobs:
           token: ${{ secrets.GHUB_GITHUB_TOKEN }}
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
-      - name: Print release ouput for debugging
-        run: |
-          echo "Release outputs:"
-          echo "Release version: ${{ steps.release.outputs.version }}"
-          echo "General output: ${{ steps.release.outputs }}"
