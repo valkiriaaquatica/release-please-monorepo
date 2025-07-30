@@ -20,10 +20,9 @@ jobs:
           token: ${{ secrets.GHUB_GITHUB_TOKEN }}
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
-      - name: Print release outputs for debugging
+      - name: Print release ouput for debugging
         run: |
-          echo "all:        ${{ steps.release.outputs }}"
-          echo "backend--release_created: ${{ steps.release.outputs.backend--release_created }}"
-          echo "backend--tag_name:        ${{ steps.release.outputs.backend--tag_name }}"
-          echo "frontend--release_created: ${{ steps.release.outputs.frontend--release_created }}"
-          echo "frontend--tag_name:        ${{ steps.release.outputs.frontend--tag_name }}"
+          echo "Release outputs:"
+          echo "${{ toJson(steps.release.outputs) }}"
+          echo "Release version: ${{ steps.release.outputs.version }}"
+          echo "General output: ${{ steps.release.outputs }}"
